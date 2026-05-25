@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – Spring Boot JWT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dashboard-page">
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="leaf">🍃</span>
+      <span>Spring<strong>Boot</strong></span>
+    </div>
+    <div class="navbar-right">
+      <div class="user-chip">
+        <div class="avatar" id="avatarInitial">?</div>
+        <span id="navUsername">Cargando…</span>
+      </div>
+      <button class="btn-logout" id="logoutBtn">⏏ Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main class="main-content">
+
+    <!-- Banner de éxito -->
+    <div class="welcome-banner">
+      <span class="big-icon">✅</span>
+      <div>
+        <h1>¡Inicio de Sesión Exitoso!</h1>
+        <p>Bienvenido, <strong id="welcomeUser">…</strong>. Tu sesión está activa y protegida con JWT.</p>
+      </div>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="cards-grid">
+
+      <!-- Información de usuario -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">👤</span>
+          <h2>Información de Usuario</h2>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">Usuario</span>
+            <span class="info-value" id="infoUsuario">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Estado</span>
+            <span class="info-value"><span class="badge badge-green">✅ Autenticado</span></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Tecnología</span>
+            <span class="info-value" id="infoTech">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seguridad JWT -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">🔐</span>
+          <h2>Seguridad JWT</h2>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">Token almacenado en</span>
+            <span class="info-value"><code>HttpOnly Cookie</code></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Accesible desde JS</span>
+            <span class="info-value"><span class="badge badge-red">❌ Bloqueado</span></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Algoritmo</span>
+            <span class="info-value"><code>HS256</code></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Expiración</span>
+            <span class="info-value">1 hora</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">🍪</span>
+          <h2>Configuración Cookie</h2>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">Nombre</span>
+            <span class="info-value"><code>auth_token</code></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">HttpOnly</span>
+            <span class="info-value"><span class="badge badge-green">true</span></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">SameSite</span>
+            <span class="info-value"><code>Lax</code></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Path</span>
+            <span class="info-value"><code>/</code></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">⚡</span>
+          <h2>Tech Stack</h2>
+        </div>
+        <div class="card-body tech-stack">
+          <span class="tech-badge">🍃 Spring Boot 4</span>
+          <span class="tech-badge">🔑 JWT · JJWT 0.12</span>
+          <span class="tech-badge">🛡️ Spring Security</span>
+          <span class="tech-badge">🍪 HttpOnly Cookie</span>
+          <span class="tech-badge">☕ Java 21</span>
+          <span class="tech-badge">🌐 REST API</span>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

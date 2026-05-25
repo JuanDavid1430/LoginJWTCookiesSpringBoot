@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Spring Boot JWT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      <span class="leaf">🍃</span>
+      <h1>Spring<span>Boot</span></h1>
+      <p class="login-subtitle">Autenticación con <span class="jwt-tag">JWT</span> + Cookies</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input
+          type="text"
+          id="usuario"
+          placeholder="ej. juan"
+          autocomplete="username"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="clave">Contraseña</label>
+        <input
+          type="password"
+          id="clave"
+          placeholder="••••••"
+          autocomplete="current-password"
+          required
+        />
+      </div>
+
+      <div id="errorMsg" class="error-msg hidden"></div>
+
+      <button type="submit" class="btn-primary" id="submitBtn">
+        <span id="btnText">Iniciar Sesión</span>
+        <span id="btnLoader" class="spinner hidden"></span>
+      </button>
+
+    </form>
+
+    <p class="hint">
+      💡 Credenciales de prueba: cualquier usuario · clave <strong>1234</strong>
+    </p>
+
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
